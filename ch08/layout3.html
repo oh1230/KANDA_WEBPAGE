@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>3カラムのレイアウト</title>
+		<link rel = "stylesheet" href = "guide.css">
+		<style>
+			.float-left {
+				float: left;
+			}
+			.clearfix:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.w33 {
+				width: 33.3333%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>BOXを横に並べる（3カラムのレイアウト）</h1>
+		<div class = "container">
+			<h2>STEP1. BOXを用意する</h2>
+			<div class = "box box-yellow">BOX1</div>
+			<div class = "box box-orange">BOX2</div>
+			<div class = "box box-blue">BOX3</div>
+			<div class = "box box-green">BOX4</div>
+			<div class = "box box-purple">BOX5</div>
+		</div>
+		<div class = "container">
+			<h2>STEP2. 横に並べたいBOX2とBOX3とBOX4をグループにする</h2>
+			<div class = "box box-yellow">BOX1</div>
+			<div class = "box box-pink">
+				<div class = "box box-orange">BOX2</div>
+				<div class = "box box-blue">BOX3</div>
+				<div class = "box box-green">BOX4</div>
+			</div>
+			<div class = "box box-purple">BOX5</div>
+		</div>
+		<div class = "container">
+			<h2>STEP3. BOX2とBOX3とBOX4を横に並べる</h2>
+			<div class = "box box-yellow">BOX1</div>
+			<div class = "box box-pink">
+				<div class = "box box-orange float-left">BOX2</div>
+				<div class = "box box-blue float-left">BOX3</div>
+				<div class = "box box-green float-left">BOX4</div>
+			</div>
+			<div class = "box box-purple">BOX5</div>
+			<p>BOX5が後ろに入り込んでしまう･･･</p>
+		</div>
+		<div class = "container">
+			<h2>STEP4. BOX5が後ろに入り込まないようにする</h2>
+			<div class = "box box-yellow">BOX1</div>
+			<div class = "box box-pink clearfix">
+				<div class = "box box-orange float-left">BOX2</div>
+				<div class = "box box-blue float-left">BOX3</div>
+				<div class = "box box-green float-left">BOX4</div>
+			</div>
+			<div class = "box box-purple">BOX5</div>
+		</div>
+		<div class = "container">
+			<h2>STEP5. BOX2とBOX3とBOX4の横幅を指定する</h2>
+			<div class = "box box-yellow">BOX1</div>
+			<div class = "box box-pink clearfix">
+				<div class = "box box-orange float-left w33">BOX2</div>
+				<div class = "box box-blue float-left w33">BOX3</div>
+				<div class = "box box-green float-left w33">BOX4</div>
+			</div>
+			<div class = "box box-purple">BOX5</div>
+		</div>
+	</body>
+</html>

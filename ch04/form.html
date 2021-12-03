@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<meta charset = "UTF-8">
+	<title> フォームの作成 </title>
+</head>
+<body>
+	<form action = "" method = "POST">
+		<p>名前：<input type = "text" name = "name"></p>
+		<p>メッセージ：</p>
+		<textarea name = "message" rows = "5" cols = "40"></textarea>
+		<p>性別：
+		男性<input type = "radio" name = "gender" value = "man">
+		女性<input type = "radio" name = "gender" value = "woman">
+		</p>
+		<p>好きな動物：
+		犬<input type = "checkbox" name = "animal" value = "dog">
+		猫<input type = "checkbox" name = "animal" value = "cat">
+		馬<input type = "checkbox" name = "animal" value = "horse">
+		猿<input type = "checkbox" name = "animal" value = "monkey">
+		</p>
+		<p>今日の晩御飯
+		<select name = "dinner">
+		<option value = "riceball"> おにぎり </option>
+		<option value = "udon"> うどん </option>
+		<option value = "ramen"> ラーメン </option>
+		<option value = "soba"> そば </option>
+		</select>
+		</p>
+		<input type = "submit" value = "送信">
+		<input type = "reset" value = "やり直し">
+	</form>
+</body>
+</html>

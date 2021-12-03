@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<meta charset = "UTF-8">
+	<title> フォームの作成 </title>
+</head>
+<body>
+	<form action = "" method = "POST">
+		<p>①あなたのお名前を入力してください。</p>
+		<input type = "text" name = "name">
+
+		<p>②性別を選んでください。</p>
+		男<input type = "radio" name = "gender" value = "man">
+		女<input type = "radio" name = "gender" value = "woman">
+		
+		<p>③お住いの地域を選択してください。</p>
+		<select name = "area">
+		<option value = "hokaido"> 北海道 </option>
+		<option value = "tohoku"> 東北 </option>
+		<option value = "kantou"> 関東 </option>
+		<option value = "kansei"> 関西 </option>
+		<option value = "kyushu"> 九州 </option>
+		</select>
+		
+		<p>④興味のあることを選択してください。（複数選択可）</p>
+		ジョギング<input type = "checkbox" name = "hobby" value = "walking">
+		サッカー<input type = "checkbox" name = "hobby" value = "soccer">
+		野球<input type = "checkbox" name = "hobby" value = "baseball">
+		水泳<input type = "checkbox" name = "hobby" value = "swimming">
+
+		<p>⑤記入が終わりましたら、送信ボタンをおしてください。</p>
+		<input type = "submit" value = "送信">
+		<input type = "reset" value = "やり直し">
+	</form>
+</body>
+</html>

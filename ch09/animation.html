@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html lang = "ja">
+	<head>
+		<meta charset = "UTF-8">
+		<title>animationプロパティ</title>
+		<style>
+			.img-slide {
+				width: 980px;
+				margin: 50px auto;
+				position relative;
+			}
+			.img-slide img {
+				position: absolute;
+				background-color: #fff;
+				box-shadow: 5px 5px 5px #ddd;
+				border: 1px solid #ddd;
+				padding: 8px;
+			}
+			.img1 {
+				-webkit-animation: slide 16s ease 0s infinite normal
+			}
+			.img2 {
+				-webkit-animation: slide 16s ease -4s infinite normal
+			}
+			.img3 {
+				-webkit-animation: slide 16s ease -8s infinite normal
+			}
+			.img4 {
+				-webkit-animation: slide 16s ease -12s infinite normal
+			}
+			@-webkit-keyframes slide {
+				0% { top: 20px; left: 200px; width: 480px; z-index: 4; }
+				20% { top: 20px; left: 200px; width: 480px; z-index: 4; }
+				25% { top: 50px; left: 480px; width: 400px; z-index: 3; }
+				45% { top: 50px; left: 480px; width: 400px; z-index: 3; }
+				50% { top: 50px; left: 200px; width: 400px; z-index: 1; }
+				70% { top: 50px; left: 200px; width: 400px; z-index: 1; }
+				75% { top: 50px; left: 0px; width: 400px; z-index: 3; }
+				95% { top: 50px; left: 0px; width: 400px; z-index: 3; }
+				100% { top: 20px; left: 200px; width: 480px; z-index: 4; }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="img-slide">
+			<img src="../img/koneko01.jpg" alt="" class = "img1">
+			<img src="../img/koinu01.jpg" alt="" class = "img2">
+			<img src="../img/img04.jpg" alt="" class = "img3">
+			<img src="../img/img03.jpg" alt="" class = "img4">
+		</div>
+	</body>
+</html>
